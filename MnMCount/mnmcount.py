@@ -16,7 +16,7 @@ if __name__ == "__main__":
 
 spark = (SparkSession
          .builder
-         .appname("PythonMnMCount")
+         .appName("PythonMnMCount")
          .getOrCreate())
 
 # Get the dataset
