@@ -1,0 +1,18 @@
+# submit multiple .py files
+
+spark-submit file1.py \
+    --master local \
+    --driver-memory 2g \
+    --executor-memory 2g \
+    --py-files file2.py,file3.py,file4.py \
+    --files conf.txt
+If your files are located in a S3 instance, you can try the following:
+
+spark-submit s3://path/to/file1.py \
+    --master local \
+    --driver-memory 2g \
+    --executor-memory 2g \
+    --py-files s3://path/to/file2.py,s3://path/to/file3.py,s3://path/to/file4.py \
+    --files s3://path/to/conf.txt
+
+Local warehouse created by spark: /Users/darioguth/spark-warehouse
